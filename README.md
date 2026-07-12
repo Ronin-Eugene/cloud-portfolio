@@ -1,16 +1,16 @@
-# 🚀 AWS Cloud Portfolio
+#  AWS Cloud Portfolio
 
 A production-style personal portfolio hosted on AWS using Amazon S3, CloudFront, and GitHub Actions with secure OIDC authentication.
 
 ---
 
-## 🌐 Live Demo
+##  Live Demo
 
 🔗 https://d3pbd2sug35sj5.cloudfront.net/
 
 ---
 
-## 📖 Overview
+##  Overview
 
 This project is a static portfolio website built with HTML, CSS, and JavaScript.
 
@@ -28,7 +28,7 @@ The goal of this project is to demonstrate practical cloud engineering and DevOp
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 ```text
                 git push
@@ -58,7 +58,7 @@ The goal of this project is to demonstrate practical cloud engineering and DevOp
 
 ---
 
-## ⚙️ Technologies Used
+##  Technologies Used
 
 ### Frontend
 
@@ -82,7 +82,7 @@ The goal of this project is to demonstrate practical cloud engineering and DevOp
 
 ---
 
-## ✨ Features
+##  Features
 
 - Responsive portfolio website
 - Private S3 bucket
@@ -94,7 +94,7 @@ The goal of this project is to demonstrate practical cloud engineering and DevOp
 
 ---
 
-## 🚀 CI/CD Pipeline
+##  CI/CD Pipeline
 
 Every push to the `main` branch automatically:
 
@@ -107,7 +107,7 @@ Every push to the `main` branch automatically:
 
 ---
 
-## 🔒 Security
+##  Security
 
 Instead of storing AWS Access Keys inside GitHub Secrets, this project uses:
 
@@ -119,7 +119,7 @@ This follows AWS security best practices.
 
 ---
 
-## 📊 Monitoring
+##  Monitoring
 
 Amazon CloudWatch is used to monitor:
 
@@ -130,7 +130,7 @@ Amazon CloudWatch is used to monitor:
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```text
 cloud-portfolio
@@ -150,7 +150,7 @@ cloud-portfolio
 
 ---
 
-## 🎯 Future Improvements
+##  Future Improvements
 
 - [ ] Terraform Infrastructure as Code
 - [ ] Custom Domain
@@ -162,7 +162,7 @@ cloud-portfolio
 
 ---
 
-## 👤 Author
+##  Author
 
 **Thiha Soe**
 
