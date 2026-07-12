@@ -178,7 +178,22 @@
                     <p class="eyebrow">お問い合わせ</p>
                     <h3>クラウド・DevOps分野での新しい機会を探しています。お気軽にご連絡ください！</h3>
                 </div>
-                <a href="mailto:thihasoe20697@gmail.com" class="button primary">メールする</a>
+
+                <button id="contact-toggle" class="button primary" type="button">メールする</button>
+
+                <div id="contact-modal" class="contact-modal" hidden>
+                    <form id="contact-form" class="contact-form">
+                        <input type="text" id="name" name="name" placeholder="お名前" required>
+                        <input type="email" id="email" name="email" placeholder="メールアドレス" required>
+                        <input type="text" id="subject" name="subject" placeholder="件名" required>
+                        <textarea id="message" name="message" rows="6" placeholder="メッセージ" required></textarea>
+                        <div class="contact-actions">
+                            <button id="submit-button" type="submit" class="button primary">送信</button>
+                            <button type="button" id="contact-close" class="button secondary">キャンセル</button>
+                        </div>
+                        <p id="status-message"></p>
+                    </form>
+                </div>
             </div>
         </section>
     </footer>

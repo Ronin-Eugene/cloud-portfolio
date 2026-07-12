@@ -180,7 +180,22 @@
                     <p class="eyebrow">Contact</p>
                     <h3>Open to Cloud and DevOps opportunities. Feel free to reach out!</h3>
                 </div>
-                <a href="mailto:thihasoe20697@gmail.com" class="button primary">Email Me</a>
+
+                <button id="contact-toggle" class="button primary" type="button">Email Me</button>
+
+                <div id="contact-modal" class="contact-modal" hidden>
+                    <form id="contact-form" class="contact-form">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        <textarea id="message" name="message" rows="6" placeholder="Your Message" required></textarea>
+                        <div class="contact-actions">
+                            <button id="submit-button" type="submit" class="button primary">Send Message</button>
+                            <button type="button" id="contact-close" class="button secondary">Cancel</button>
+                        </div>
+                        <p id="status-message"></p>
+                    </form>
+                </div>
             </div>
         </section>
     </footer>
