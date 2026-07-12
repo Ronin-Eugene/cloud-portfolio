@@ -161,7 +161,59 @@ cloud-portfolio
 - [ ] Lambda Contact Form
 
 ---
+2026/7/12
 
+## Added the Contact Form
+
+The portfolio includes a fully serverless contact form that enables visitors to send messages directly from the website.
+
+### Workflow
+
+When a visitor submits the contact form:
+
+1. JavaScript validates the form inputs.
+2. The form data is sent as a JSON payload to Amazon API Gateway using the Fetch API.
+3. API Gateway invokes an AWS Lambda function written in Python.
+4. Lambda validates the request.
+5. A unique `contactId` (UUID) is generated.
+6. The message is stored in Amazon DynamoDB.
+7. Amazon SES sends an email notification to the portfolio owner.
+8. Lambda returns a JSON response.
+9. The frontend displays a success or error message to the user.
+
+### Technologies Used
+
+- JavaScript (Fetch API / Async-Await)
+- Amazon API Gateway
+- AWS Lambda (Python)
+- Amazon DynamoDB
+- Amazon SES
+- IAM
+- CloudWatch
+
+### Stored Data
+
+Each contact submission is stored in DynamoDB with the following attributes:
+
+| Attribute | Description |
+|-----------|-------------|
+| contactId | Unique UUID |
+| name | Visitor's name |
+| email | Visitor's email address |
+| subject | Subject of the message |
+| message | Message content |
+| createdAt | UTC timestamp |
+
+### Email Notification
+
+After successfully storing the message in DynamoDB, AWS Lambda sends an email notification using Amazon SES containing:
+
+- Name
+- Email
+- Subject
+- Message
+
+If Amazon SES is temporarily unavailable, the contact message is still safely stored in DynamoDB.
 ##  Author
 
 **Thiha Soe**
